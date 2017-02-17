@@ -1,0 +1,336 @@
+/*============================*/
+
+/* flebox mixins for parent container*/
+/*@mixin display*/
+/*
+@include display--flex;
+@include display--inline-flex;
+*/
+
+/*@mixin flex-direction*/
+/*
+@include flex-direction--row;
+@include flex-direction--row-revers;
+@include flex-direction--column;
+@include flex-direction--column-revers;
+*/
+
+/*@mixin flex-wrap*/
+/*
+@include flex-wrap--nowrap;
+@include flex-wrap--wrap;
+*/
+
+/*@mixin justify-content*/
+/*
+@include justify-content--flex-start;
+@include justify-content--flex-end;
+@include justify-content--center;
+@include justify-content--space-between;
+@include justify-content--space-around;
+*/
+
+/*@mixin align-items*/
+/*
+@include align-items--flex-start;
+@include align-items--flex-end;
+@include align-items--flex-end;
+@include align-items--flex-center;
+@include align-items--flex-baseline;
+@include align-items--flex-stretch;
+*/
+
+/*@mixin align-content*/
+/*
+@include align-content--flex-start;
+@include align-content--flex-end;
+@include align-content--center;
+@include align-content--space-between;
+@include align-content--space-around;
+@include align-content--stretch;
+*/
+
+/* flebox mixins for child container*/
+/*@mixin order()*/
+/*
+@include order($count);
+*/
+
+/*@mixin flex()*/
+/*
+@include flex($flex-grow $flex-shrink $flex-basis);
+*/
+
+/*@mixin align-self*/
+/*
+@include align-self--auto;
+@include align-self--flex-start;
+@include align-self--flex-end;
+@include align-self--center;
+@include align-self--baseline;
+@include align-self--stretch;
+*/
+
+/*============================*/
+
+@mixin flex-container {
+    @include display--flex;
+    @include flex-direction--row;
+    @include flex-wrap--nowrap;
+    @include justify-content--flex-start;
+    @include align-items--flex-start;
+    @include align-content--stretch;
+}
+
+@mixin flex-item {
+    @include order(0);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    @include flex-basis(auto);
+    @include align-self--auto;
+}
+
+/* flebox mixins for parent container*/
+/*display--flex*/
+@mixin display--flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/*display--inline-flex*/
+@mixin display--inline-flex {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+/*flex-direction--row*/
+@mixin flex-direction--row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+/*flex-direction--row-revers*/
+@mixin flex-direction--row-revers {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+/*flex-direction--column*/
+@mixin flex-direction--column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/*flex-direction--column-revers*/
+@mixin flex-direction--column-revers {
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+/*flex-wrap--nowrap*/
+@mixin flex-wrap--nowrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+/*flex-wrap--wrap*/
+@mixin flex-wrap--wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/*flex-wrap--reverse*/
+@mixin flex-wrap--reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+/*justify-content--flex-start*/
+@mixin justify-content--flex-start {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+/*justify-content--flex-end*/
+@mixin justify-content--flex-end {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+/*justify-content--center*/
+@mixin justify-content--center {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/*justify-content--space-between*/
+@mixin justify-content--space-between {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/*justify-content--space-around*/
+@mixin justify-content--space-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+/*align-items--flex-start*/
+@mixin align-items--flex-start {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+/*align-items--flex-end*/
+@mixin align-items--flex-end {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+/*align-items--center*/
+@mixin align-items--center {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*align-items--baseline*/
+@mixin align-items--baseline {
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+/*align-items--stretch*/
+@mixin align-items--stretch {
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+/*align-content--flex-start*/
+@mixin align-content--flex-start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+/*align-content--flex-end*/
+@mixin align-content--flex-end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+/*align-content--center*/
+@mixin align-content--center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+/*align-content--space-between*/
+@mixin align-content--space-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+/*align-content--space-around*/
+@mixin align-content--space-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+}
+
+/*align-content--stretch*/
+@mixin align-content--stretch {
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+/* flebox mixins for child container*/
+/*@mixin order()*/
+@mixin order($count) {
+    -webkit-order: $count;
+    -ms-flex-order: $count;
+    order: $count;
+}
+
+/*@mixin flex-grow*/
+@mixin flex-grow($count) {
+    -webkit-box-flex: $count;
+    -ms-flex-positive: $count;
+    flex-grow: $count;
+}
+
+/*@mixin flex-shrink*/
+@mixin flex-shrink($count) {
+    -ms-flex-negative: $count;
+    flex-shrink: $count;
+}
+
+/*@mixin flex-basis*/
+@mixin flex-basis($count) {
+    -ms-flex-preferred-size: $count;
+    flex-basis: $count;
+}
+
+/*align-self--auto*/
+@mixin align-self--auto {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+/*align-self--flex-start*/
+@mixin align-self--flex-start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+/*align-self--flex-end*/
+@mixin align-self--flex-end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+/*align-self--center*/
+@mixin align-self--center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+/*align-self--baseline*/
+@mixin align-self--baseline {
+    -webkit-align-self: baseline;
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}
+
+/*align-self--stretch*/
+@mixin align-self--stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
